@@ -8,9 +8,11 @@ const forecast=(latitude,longtitude,callback)=>{
         }else if(body.code===400){
             callback('Forecast location could not be found.',undefined)
         }else{
+            
+            humidity=body.currently.humidity
             temp= body.currently.temperature
             chanceRain=body.currently.precipProbability
-            callback(undefined,body.daily.data[0].summary +' It is currently ' +temp+' degrees out. There is a '+ chanceRain+ '% Chance of rain.'  )
+            callback(undefined,body.daily.data[0].summary +' It is currently ' +temp+' degrees out. \nThere is a '+ chanceRain+ '% Chance of rain.\nHumidity is currently at ' +humidity )
             // callback(undefined,{
             //     location:response.body.timezone,
             //     summary:response.body.daily.data[0].summary,
