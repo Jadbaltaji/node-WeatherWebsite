@@ -1,5 +1,5 @@
 const request=require('request')
-
+//Function that takes a string 'address' and provides the coordinates of the location.
 const geocode=(address,callback)=>{
     const url ='https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) +'.json?access_token=pk.eyJ1IjoiamFkYiIsImEiOiJjazZsOG84M2wwY2tnM2txZnlkbjNnM2Q0In0.BOKAqQUEM_C0TkJBDBEjYg&limit=1'
     request({url,json:true},(error,{body})=>{

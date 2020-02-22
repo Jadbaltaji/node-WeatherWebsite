@@ -1,5 +1,5 @@
 const request=require('request')
-
+//FUNCTION that takes lat/latitude and provides weather forecast
 const forecast=(latitude,longtitude,callback)=>{
     const url= 'https://api.darksky.net/forecast/2858332c771ae5f1c1cb68cd4423a3ce/'+latitude+','+longtitude
     request({url:url,json:true},(error,{body})=>{

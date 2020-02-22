@@ -55,7 +55,7 @@ app.get("/weather", (req, res) => {
       error: "Please enter address."
     });
   }
-
+//Calling Geo code API throwing an address in and retrieving Lat/long
   geocode(address, (error, {latitude,longtitude,location}={}) => {
     //DESTRUCTURED DATA
     // const { latitude, longtitude, location } = geoData;
@@ -64,7 +64,7 @@ app.get("/weather", (req, res) => {
         error
       });
     }
-
+    //passing lang/long into forecast API
     forecast(latitude, longtitude, (error, foreCastData) => {
       if (error) {
         return res.send({
