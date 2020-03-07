@@ -64,3 +64,15 @@ ul input {
   display: block;
   list-style-type: none;
 }
+
+#button{
+  cursor: pointer;
+  border: 1px solid #888888;
+  background: #888888;
+  color: white;
+  padding: 8px;
+}
+#floated {
+  float:left;
+  margin-right:5px;
+}
